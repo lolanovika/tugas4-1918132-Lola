@@ -10,6 +10,8 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
 
+import de.hdodenhof.circleimageview.CircleImageView;
+
 public class mahasiswaadapter extends
         RecyclerView.Adapter<mahasiswaadapter.MahasiswaViewHolder>{
     private ArrayList<mahasiswa> dataList;
@@ -37,17 +39,15 @@ public class mahasiswaadapter extends
     public int getItemCount() {
         return (dataList != null) ? dataList.size() : 0;
     }
-    public class MahasiswaViewHolder extends
-            RecyclerView.ViewHolder{
+    public class MahasiswaViewHolder extends RecyclerView.ViewHolder{
         private TextView txtNama, txtNim, txtAngkatan;
+        private CircleImageView profile_image;
         public MahasiswaViewHolder(View itemView) {
             super(itemView);
-            txtNama = (TextView)
-                    itemView.findViewById(R.id.txt_nama);
-            txtNim = (TextView)
-                    itemView.findViewById(R.id.txt_nim);
-            txtAngkatan = (TextView)
-                    itemView.findViewById(R.id.txt_angkatan);
+            profile_image= (CircleImageView) itemView.findViewById(R.id.gambar);
+            txtNama = (TextView) itemView.findViewById(R.id.tv_nama);
+            txtNim = (TextView) itemView.findViewById(R.id.tv_nim);
+            txtAngkatan = (TextView) itemView.findViewById(R.id.tv_angkatan);
         }
     }
 }

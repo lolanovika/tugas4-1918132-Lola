@@ -17,21 +17,19 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         addData();
-        recyclerView =
-                (RecyclerView)findViewById(R.id.recycleview);
+        recyclerView = (RecyclerView)findViewById(R.id.recycleview);
         adapter = new mahasiswaadapter(mahasiswaArrayList);
-        RecyclerView.LayoutManager layoutManager = new
-                LinearLayoutManager(MainActivity.this);
+        RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(MainActivity.this);
         recyclerView.setLayoutManager(layoutManager);
         recyclerView.setAdapter(adapter);
     }
     private void addData() {
         mahasiswaArrayList = new ArrayList<>();
-        mahasiswaArrayList.add(new mahasiswa("Agung", "1218019",
-                "2012"));
-        mahasiswaArrayList.add(new mahasiswa("Abi", "1118002",
-                "2011"));
-        mahasiswaArrayList.add(new mahasiswa("Yudis", "1118031",
-                "2011"));
+        mahasiswaArrayList.add(new mahasiswa("Customer 1", "Serum Brightrning",
+                "Rp 25.000",R.drawable.ic_1));
+        mahasiswaArrayList.add(new mahasiswa("Customer 2", "Body Wash",
+                "Rp 35.000",R.drawable.ic_2));
+        mahasiswaArrayList.add(new mahasiswa("Customer 3", "Smoothing Shampoo",
+                "Rp 30.000",R.drawable.ic_3));
     }
 }

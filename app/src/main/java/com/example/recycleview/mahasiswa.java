@@ -1,11 +1,23 @@
 package com.example.recycleview;
 
+import android.graphics.drawable.Drawable;
+
 public class mahasiswa {
     private String nama,nim,angkatan;
-    public mahasiswa(String nama, String nim, String angkatan){
+    public int gambar;
+    public mahasiswa(String nama, String nim, String angkatan,int gambar){
         this.nama = nama;
         this.nim = nim;
         this.angkatan = angkatan;
+        this.gambar = gambar;
+    }
+    public int getGambar()
+    {
+        return gambar;
+    }
+    public void setGambar(int gambar)
+    {
+        this.gambar = gambar;
     }
     public String getNama(){
         return nama;
